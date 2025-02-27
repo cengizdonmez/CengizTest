@@ -9,22 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - CengizTest</title>
     
-    <!-- jQuery from CDN (fallback solution) -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
-            crossorigin="anonymous"></script>
-            
     @if (Environment.IsDevelopment())
     {
         <!-- Development - Vite dev server -->
         <script type="module" src="http://localhost:5173/@@vite/client"></script>
-        <script type="module" src="http://localhost:5173/src/main.js"></script>
+        <script type="module" src="http://localhost:5173/main.js"></script>
     }
     else
     {
         <!-- Production - bundled assets -->
-        <link rel="stylesheet" href="~/dist/css/main.css" asp-append-version="true" />
-        <script type="module" src="~/dist/js/main.js" asp-append-version="true"></script>
+        @await Html.PartialAsync("_ViteImports")
     }
 </head>
 <body>

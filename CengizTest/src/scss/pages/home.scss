@@ -1,0 +1,23 @@
+// Home sayfası için özel stiller
+.home-page {
+    .display-4 {
+      font-weight: 600;
+      color: $primary-color;
+      margin-bottom: 1.5rem;
+    }
+  
+    // AJAX sonuçları için stil
+    #ajaxResult {
+      min-height: 100px;
+      transition: all 0.3s ease;
+  
+      .alert {
+        margin-top: 1rem;
+      }
+    }
+  
+    // Bootstrap örnek bileşenler
+    .collapse {
+      transition: all 0.3s ease;
+    }
+  }

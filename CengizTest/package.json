@@ -1,15 +1,20 @@
 {
   "name": "cengiztest",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "ASP.NET Core MVC with Vite.js Frontend",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "watch": "vite build --watch"
+    "watch": "vite build --watch",
+    "preview": "vite preview"
   },
-  "keywords": [],
+  "keywords": [
+    "asp.net-core",
+    "mvc",
+    "vite"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -19,6 +24,7 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.7.2"
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@popperjs/core": "^2.11.8"
   }
 }

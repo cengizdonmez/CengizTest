@@ -1,0 +1,46 @@
+@using System.IO
+@using System.Text.Json
+@using System.Collections.Generic
+
+@{
+    string manifestPath = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "wwwroot", "dist", ".vite", "manifest.json");
+    Dictionary<string, ViteManifest> viteManifest = null;
+
+    if (System.IO.File.Exists(manifestPath))
+    {
+        var json = System.IO.File.ReadAllText(manifestPath);
+        viteManifest = JsonSerializer.Deserialize<Dictionary<string, ViteManifest>>(json);
+    }
+
+    if (viteManifest != null && viteManifest.TryGetValue("src/main.js", out var entry))
+    {
+        if (entry.Css != null && entry.Css.Count > 0)
+        {
+            foreach (var css in entry.Css)
+            {
+                <link rel="stylesheet" href="~/dist/@css" asp-append-version="true" />
+            }
+        }
+
+        if (!string.IsNullOrEmpty(entry.File))
+        {
+            <script type="module" src="~/dist/@entry.File" asp-append-version="true"></script>
+        }
+    }
+    else
+    {
+        <!-- Fallback to hardcoded assets if manifest not found -->
+        <link rel="stylesheet" href="~/dist/css/main.css" asp-append-version="true" />
+        <script type="module" src="~/dist/js/main.js" asp-append-version="true"></script>
+    }
+}
+
+@functions {
+    public class ViteManifest
+    {
+        public string File { get; set; }
+        public string Src { get; set; }
+        public List<string> Css { get; set; }
+        public bool IsEntry { get; set; }
+    }
+}

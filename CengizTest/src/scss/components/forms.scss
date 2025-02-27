@@ -1,0 +1,28 @@
+// Form elemanları için özel stiller
+.form-control {
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  
+  &:focus {
+    border-color: $primary-color;
+  }
+}
+
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+// Özel form düzenleri
+.form-floating {
+  > .form-control {
+    &:focus ~ label,
+    &:not(:placeholder-shown) ~ label {
+      color: $primary-color;
+    }
+  }
+}

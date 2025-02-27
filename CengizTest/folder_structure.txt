@@ -15,26 +15,27 @@
 │   │   ├── Error.cshtml
 │   │   ├── _Layout.cshtml
 │   │   ├── _Layout.cshtml.css
-│   │   └── _ValidationScriptsPartial.cshtml
+│   │   ├── _ValidationScriptsPartial.cshtml
+│   │   └── _ViteImports.cshtml
 │   ├── _ViewImports.cshtml
 │   └── _ViewStart.cshtml
 ├── appsettings.Development.json
 ├── appsettings.json
 ├── bin
-│   └── Debug
+│   ├── Debug
+│   │   └── net7.0
+│   │       ├── CengizTest
+│   │       ├── CengizTest.deps.json
+│   │       ├── CengizTest.dll
+│   │       ├── CengizTest.pdb
+│   │       ├── CengizTest.runtimeconfig.json
+│   │       ├── CengizTest.staticwebassets.runtime.json
+│   │       ├── appsettings.Development.json
+│   │       ├── appsettings.json
+│   │       ├── package-lock.json
+│   │       └── package.json
+│   └── Release
 │       └── net7.0
-│           ├── CengizTest
-│           ├── CengizTest.deps.json
-│           ├── CengizTest.dll
-│           ├── CengizTest.pdb
-│           ├── CengizTest.runtimeconfig.json
-│           ├── CengizTest.staticwebassets.runtime.json
-│           ├── Microsoft.Extensions.FileProviders.Abstractions.dll
-│           ├── Microsoft.Extensions.FileProviders.Physical.dll
-│           ├── Microsoft.Extensions.FileSystemGlobbing.dll
-│           ├── Microsoft.Extensions.Primitives.dll
-│           ├── appsettings.Development.json
-│           └── appsettings.json
 ├── folder_structure.txt
 ├── obj
 │   ├── CengizTest.csproj.nuget.dgspec.json
@@ -50,8 +51,6 @@
 │   │       ├── CengizTest.RazorAssemblyInfo.cache
 │   │       ├── CengizTest.RazorAssemblyInfo.cs
 │   │       ├── CengizTest.assets.cache
-│   │       ├── CengizTest.csproj.AssemblyReference.cache
-│   │       ├── CengizTest.csproj.CopyComplete
 │   │       ├── CengizTest.csproj.CoreCompileInputs.cache
 │   │       ├── CengizTest.csproj.FileListAbsolute.txt
 │   │       ├── CengizTest.dll
@@ -78,11 +77,49 @@
 │   │       ├── staticwebassets.build.json
 │   │       ├── staticwebassets.development.json
 │   │       └── staticwebassets.pack.json
+│   ├── Release
+│   │   └── net7.0
+│   │       ├── CengizTest.AssemblyInfo.cs
+│   │       ├── CengizTest.AssemblyInfoInputs.cache
+│   │       ├── CengizTest.GeneratedMSBuildEditorConfig.editorconfig
+│   │       ├── CengizTest.GlobalUsings.g.cs
+│   │       ├── CengizTest.MvcApplicationPartsAssemblyInfo.cache
+│   │       ├── CengizTest.RazorAssemblyInfo.cache
+│   │       ├── CengizTest.RazorAssemblyInfo.cs
+│   │       ├── CengizTest.assets.cache
+│   │       ├── CengizTest.csproj.CoreCompileInputs.cache
+│   │       ├── CengizTest.csproj.FileListAbsolute.txt
+│   │       ├── ref
+│   │       ├── refint
+│   │       └── staticwebassets
 │   ├── project.assets.json
 │   └── project.nuget.cache
+├── package-lock.json
+├── package.json
+├── src
+│   ├── common.js
+│   ├── js
+│   │   ├── pages
+│   │   │   ├── home.js
+│   │   │   └── privacy.js
+│   │   └── site.js
+│   ├── main.js
+│   └── scss
+│       ├── components
+│       │   ├── buttons.scss
+│       │   ├── cards.scss
+│       │   └── forms.scss
+│       ├── pages
+│       │   ├── home.scss
+│       │   └── privacy.scss
+│       ├── site.scss
+│       └── variables.scss
+├── vite.config.js
 └── wwwroot
     ├── css
     │   └── site.css
+    ├── dist
+    │   └── css
     ├── favicon.ico
     ├── js
     │   └── site.js
@@ -154,4 +191,4 @@
             ├── jquery.validate.unobtrusive.js
             └── jquery.validate.unobtrusive.min.js
 
-34 directories, 121 files
+49 directories, 143 files
