@@ -45,3 +45,6 @@
     }
   }
 }
+
+// Production'da çalıştırmak için:
+// dotnet run --launch-profile Production
