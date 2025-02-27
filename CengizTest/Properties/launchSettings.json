@@ -9,10 +9,7 @@
     }
   },
 
-  // http - HTTP üzerinden Development ortamı
-  // https - HTTPS üzerinden Development ortamı
-  // Production - HTTPS üzerinden Production ortamını simüle eden profil
-  // IIS Express - IIS Express üzerinden Development ortamı
+
   "profiles": {
     "http": {
       "commandName": "Project",
@@ -51,5 +48,3 @@
   }
 }
 
-// Production'da çalıştırmak için:
-// dotnet run --launch-profile Production
