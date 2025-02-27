@@ -48,7 +48,8 @@ export default defineConfig({
     // Otomatik sayfa yenileme için
     hmr: {
       host: 'localhost',
-    },
+      protocol: 'ws',
+    },  
   },
   
   // Diğer özellikler

@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Hakkımızda";
+}
+
+<div class="container hakkimizda-page">
+    <h1>Hakkımızda</h1>
+    <div class="row">
+        <div class="col-md-8">
+            <p>Buraya hakkımızda içeriği gelecek...</p>
+            <p>Firmamız 2010 yılında kuruldu ve o zamandan beri müşterilerimize kaliteli hizmet sunmaktayız.</p>
+            <!-- Diğer içerikler -->
+        </div>
+        <div class="col-md-4">
+            <!-- Sidebar component burada kullanılacak -->
+            <partial name="_Sidebar" />
+            <!-- @await Html.PartialAsync("_Sidebar") -->
+
+        </div>
+    </div>
+</div>
