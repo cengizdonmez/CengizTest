@@ -9,10 +9,14 @@
     if (System.IO.File.Exists(manifestPath))
     {
         var json = System.IO.File.ReadAllText(manifestPath);
-        viteManifest = JsonSerializer.Deserialize<Dictionary<string, ViteManifest>>(json);
+        var options = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        };
+        viteManifest = JsonSerializer.Deserialize<Dictionary<string, ViteManifest>>(json, options);
     }
 
-    if (viteManifest != null && viteManifest.TryGetValue("src/js/main.js", out var entry))
+    if (viteManifest != null && viteManifest.TryGetValue("js/main.js", out var entry))
     {
         if (entry.Css != null && entry.Css.Count > 0)
         {
