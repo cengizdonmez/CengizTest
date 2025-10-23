@@ -5,18 +5,18 @@ export default defineConfig({
   // Temel proje ayarları
   root: 'src',
   base: process.env.NODE_ENV === 'production' ? '/dist/' : '/',
-  
+
   // Build ayarları
   build: {
     // Build çıktı klasörü
     outDir: '../wwwroot/dist',
     emptyOutDir: true,
     manifest: true,
-    
+
     // JS ve CSS dosyaları için çıktı ayarları
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'src/main.js'),
+        main: resolve(__dirname, 'src/js/main.js'),
       },
       output: {
         entryFileNames: 'js/[name].js',
@@ -38,7 +38,7 @@ export default defineConfig({
       },
     },
   },
-  
+
   // Dev server ayarları
   server: {
     port: 5173,
@@ -49,15 +49,13 @@ export default defineConfig({
     hmr: {
       host: 'localhost',
       protocol: 'ws',
-    },  
+    },
   },
-  
+
   // Diğer özellikler
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
     },
   }
-  
-  // css preprocessorOptions kısmını kaldırdık
 });

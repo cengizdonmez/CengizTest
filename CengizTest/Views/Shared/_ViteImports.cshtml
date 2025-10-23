@@ -12,7 +12,7 @@
         viteManifest = JsonSerializer.Deserialize<Dictionary<string, ViteManifest>>(json);
     }
 
-    if (viteManifest != null && viteManifest.TryGetValue("src/main.js", out var entry))
+    if (viteManifest != null && viteManifest.TryGetValue("src/js/main.js", out var entry))
     {
         if (entry.Css != null && entry.Css.Count > 0)
         {

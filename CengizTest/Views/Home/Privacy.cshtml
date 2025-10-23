@@ -1,6 +1,44 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold text-gray-900 mb-6">@ViewData["Title"]</h1>
+
+    <div class="prose prose-blue max-w-none">
+        <p class="text-gray-700 mb-4">
+            Use this page to detail your site's privacy policy. This is a starter template showing
+            how to structure content with Tailwind CSS.
+        </p>
+
+        <div class="card mt-6">
+            <div class="card-header">Information We Collect</div>
+            <div class="card-body">
+                <p class="text-gray-700">
+                    This is an example section. Replace this with your actual privacy policy content.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">How We Use Your Information</div>
+            <div class="card-body">
+                <p class="text-gray-700">
+                    Add your privacy policy details here. This template uses Tailwind CSS for styling.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Contact Us</div>
+            <div class="card-body">
+                <p class="text-gray-700 mb-3">
+                    If you have any questions about this Privacy Policy, please contact us.
+                </p>
+                <a href="mailto:info@example.com" class="text-blue-600 hover:text-blue-800 underline">
+                    info@example.com
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
